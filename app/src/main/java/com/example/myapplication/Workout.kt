@@ -6,6 +6,7 @@ class Workout(var title:String, var description:String, var picPath:String, var 
               val durationAll:String, var tutorials:ArrayList<Tutorial>
 ):Serializable {
 
+
 //    fun getTittle(): String{
 //        return title
 //    }

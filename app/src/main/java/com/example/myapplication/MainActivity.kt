@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.content.Context
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,11 +21,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+//        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
         val workoutList:ArrayList<Workout> = getData()
         val recyclerView :RecyclerView = binding.recyclerView1
         recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL,false)
-        recyclerView.adapter = WorkoutAdapter(applicationContext,workoutList)
+        recyclerView.adapter = WorkoutAdapter(workoutList)
 
     }
 

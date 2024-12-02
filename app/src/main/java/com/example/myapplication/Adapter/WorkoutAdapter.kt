@@ -18,8 +18,9 @@ import com.example.myapplication.Workout
 import com.example.myapplication.WorkoutActivity
 import kotlin.coroutines.coroutineContext
 
-class WorkoutAdapter(val context: Context,val items : ArrayList<Workout>)
+class WorkoutAdapter(val items : ArrayList<Workout>)
     : RecyclerView.Adapter<WorkoutAdapter.ViewHolder>(){
+    lateinit var context: Context
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
           val title : TextView = itemView.findViewById(R.id.title_tv)
           val imageView : ImageView = itemView.findViewById(R.id.img_iv)
@@ -28,7 +29,9 @@ class WorkoutAdapter(val context: Context,val items : ArrayList<Workout>)
           val kcal :TextView = itemView.findViewById(R.id.Kcal_tv)
     }
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WorkoutAdapter.ViewHolder {
+        context =parent.context
         val view = LayoutInflater.from(parent.context).inflate(R.layout.viewholder_1,parent,false)
         return ViewHolder(view)
     }
@@ -49,6 +52,7 @@ class WorkoutAdapter(val context: Context,val items : ArrayList<Workout>)
 
         holder.itemView.setOnClickListener{
             val intent = Intent(context, WorkoutActivity::class.java)
+            intent.putExtra("object",workout)
             context.startActivity(intent)
         }
     }
