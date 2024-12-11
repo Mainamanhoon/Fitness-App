@@ -1,24 +1,19 @@
-package com.example.myapplication
+package com.example.myapplication.screen.workout_activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.WindowManager
-import android.widget.LinearLayout
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.bumptech.glide.Glide
 import com.example.myapplication.Adapter.TutorialAdapter
 import com.example.myapplication.databinding.ActivityWorkoutBinding
+import com.example.myapplication.model.Workout
 
 class WorkoutActivity : AppCompatActivity() {
     var _binding:ActivityWorkoutBinding?=null
     val binding get() = _binding!!
-    lateinit var workout :Workout
+    lateinit var workout : Workout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityWorkoutBinding.inflate(layoutInflater)

@@ -3,15 +3,12 @@ package com.example.myapplication.Adapter
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
-import android.content.res.Resources
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.contentValuesOf
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.Resource
-import com.example.myapplication.Tutorial
+import com.example.myapplication.model.Tutorial
 import com.example.myapplication.databinding.TutorialViewHolderBinding
 
 class TutorialAdapter(val tutorials:ArrayList<Tutorial>):RecyclerView.Adapter<TutorialAdapter.ViewHolder>() {
@@ -29,7 +26,7 @@ class TutorialAdapter(val tutorials:ArrayList<Tutorial>):RecyclerView.Adapter<Tu
      }
 
      override fun onBindViewHolder(holder: TutorialAdapter.ViewHolder, position: Int) {
-          val tutorial :Tutorial = tutorials[position]
+          val tutorial : Tutorial = tutorials[position]
           holder.title.text = tutorial.title
           holder.duration.text = tutorial.duration.toString()
 

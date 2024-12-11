@@ -8,15 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Recycler
 import com.bumptech.glide.Glide
-import com.example.myapplication.MainActivity
 import com.example.myapplication.R
-import com.example.myapplication.Workout
-import com.example.myapplication.WorkoutActivity
-import kotlin.coroutines.coroutineContext
+import com.example.myapplication.model.Workout
+import com.example.myapplication.screen.workout_activity.WorkoutActivity
 
 class WorkoutAdapter(val items : ArrayList<Workout>)
     : RecyclerView.Adapter<WorkoutAdapter.ViewHolder>(){

@@ -1,17 +1,12 @@
-package com.example.myapplication
+package com.example.myapplication.screen.main_activity
 
-import android.content.Context
 import android.os.Bundle
-import android.view.WindowManager
-import android.widget.LinearLayout
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.myapplication.Adapter.WorkoutAdapter
+import com.example.myapplication.model.Tutorial
+import com.example.myapplication.model.Workout
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
